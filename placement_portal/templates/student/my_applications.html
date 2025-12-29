@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .applications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .application-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .application-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        }
+
+        .application-card h3 {
+            margin: 0 0 10px 0;
+            color: #ff6f61;
+        }
+
+        .application-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .no-applications {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Applications</h2>
+
+    <div class="applications-container">
+        {% for app in applications %}
+            <div class="application-card">
+                <h3>{{ app.company.name }}</h3>
+                <p>Applied on: {{ app.applied_on }}</p>
+            </div>
+        {% empty %}
+            <p class="no-applications">No applications yet</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

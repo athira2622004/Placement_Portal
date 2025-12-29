@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Placement Portal{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            margin: 0;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        button {
+            padding: 8px 15px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/dashboard/">Dashboard</a>
+    <a href="/companies/">Companies</a>
+    <a href="/logout/">Logout</a>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
