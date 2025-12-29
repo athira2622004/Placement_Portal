@@ -18,19 +18,19 @@ A Django-based Placement Portal where students can log in, view companies, and a
 
 ## Screenshots
 
-### Home Page
+## Home Page
 ![Home](screenshots/Home.png)
 
-### Student Login
+## Student Login
 ![Login](screenshots/Login.png)
 
-### Dashboard
+## Dashboard
 ![Dashboard](screenshots/Dashboard.png)
 
-### Company List
-![Company List](screenshots/Company_list.png)
+## Company List
+![Company List](screenshots/company_list.png)
 
-### My Applications
+## My Applications
 ![Applications](screenshots/applications.png)
 
    ## How to Run Locally
